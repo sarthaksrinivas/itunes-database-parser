@@ -1,0 +1,21 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; C-c M-o slime-repl-clear-buffer
+;; C-c C-q slime-close-all-parens-in-sexp
+;; Property list or plist where every odd element is a symbol that
+;; describes what the next element is
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun make-cd (title artist rating ripped)
+  (list :title title
+	:artist artist
+	:rating rating
+	:ripped ripped))		; store cd info as plist
+(defvar *db* nil)			; create empty database
+(defun add-record (cd) (push cd *database*)) ; add cd to database
+(add-record (make-cd "American Idiot" "Green Day" 5 t))
+(add-record (make-cd "Until Now" "Swedish House Mafia" 5 t))
+(add-record (make-cd "Soul Sucker" "This Century" 4 t))
+(add-record (make-cd "Monk's Dream" "Thelonious Monk" 4 t))
+(add-record (make-cd "Kind of Blue" "Miles Davis" 5 t))
+(add-record (make-cd "Clarity" "Zedd" 3.5 t))
+(add-record (make-cd "The Dark Side of The Moon" "Pink Floyd" 4 t))
